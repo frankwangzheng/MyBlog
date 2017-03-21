@@ -2,7 +2,7 @@
 layout: post
 title: Flash an SD Card OS
 subtitle: My Own Guide to Burn an Image
-tags: [embedded, know-how]
+tags: [Embedded]
 bigimg: /img/path.jpg
 ---
 

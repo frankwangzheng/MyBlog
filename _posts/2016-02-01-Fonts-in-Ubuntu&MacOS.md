@@ -2,7 +2,7 @@
 layout: post
 title: Fonts in Ubuntu&MacOS
 subtitle: My Own Guide to customize fonts
-tags: [environment, know-how]
+tags: [Environment]
 bigimg: /img/path.jpg
 ---
 
@@ -21,7 +21,7 @@ fc-cache is the command to manually rebuild the font cache, you can use the font
 
 ### Install fonts in MacOS
 
-Installing fonts in MacOS is simpler, just copy the unzipped font files to ~/Library/fonts. In "Finder", click "Go" while pressing the "alt/option" key (⌥), the "Library" folder will appear.
+Installing fonts in MacOS is simpler, just copy the unzipped font files to ~/Library/fonts. In "Finder", click "Go" while pressing the "alt/option" key(⌥), the "Library" folder will appear.
 
 ### Font recommendation
 * [Latin Modern Mono](http://www.fontsquirrel.com/fonts/Latin-Modern-Mono)

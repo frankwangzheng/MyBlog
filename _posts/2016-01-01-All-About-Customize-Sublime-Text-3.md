@@ -2,7 +2,7 @@
 layout: post
 title: All About Sublime Text 3
 subtitle: My Own Guide to Setup ST3
-tags: [environment, know-how]
+tags: [Editor]
 bigimg: /img/path.jpg
 ---
 
@@ -13,9 +13,9 @@ bigimg: /img/path.jpg
 ### 2. Functional Packages
 
 #### General IDE Intelligence
-* [SublimeLinter](https://packagecontrol.io/packages/SublimeLinter) - For [code linting](http://stackoverflow.com/questions/8503559/what-is-linting)
 * [SublimeCodeIntel](https://packagecontrol.io/packages/SublimeCodeIntel) - For code auto-complete
 * [BracketHighlighter](https://packagecontrol.io/packages/BracketHighlighter) - For bracket highlight
+* [SublimeLinter](https://packagecontrol.io/packages/SublimeLinter) - For [code linting](http://stackoverflow.com/questions/8503559/what-is-linting)
 
 #### Markdown Preview
 * [Markdown Preview](https://packagecontrol.io/packages/Markdown%20Preview)
@@ -24,15 +24,13 @@ bigimg: /img/path.jpg
 * [LaTeXTools](https://packagecontrol.io/packages/LaTeXTools)
 * [LaTeXing](https://packagecontrol.io/packages/LaTeXing)
 
-### 3. Theme 
-* [Soda](https://packagecontrol.io/packages/Theme%20-%20Soda)
-* [Seti_UX](https://packagecontrol.io/packages/Seti_UX)
-
-### 4. Color-Scheme
-* [Tomorrow](https://packagecontrol.io/packages/Tomorrow%20Color%20Schemes)
+### 3. Theme&Color-Scheme Packages 
+* [Theme - Soda](https://packagecontrol.io/packages/Theme%20-%20Soda)
+* [Material Theme](https://packagecontrol.io/packages/Material%20Theme)
 * [Seti_UI](https://packagecontrol.io/packages/Seti_UI)
+* [Tomorrow Color Schemes](https://packagecontrol.io/packages/Tomorrow%20Color%20Schemes)
 
-### 5. Code Linting 
+### 5. Code Linting Setup
 
 #### For Python:
 
@@ -73,7 +71,7 @@ disable = F0401, W0141, R0914
 
 All pylint messages are listed [here](http://pylint-messages.wikidot.com/)
 
-#### For Cpp:
+#### For C++:
 1. Install [SublimeLinter-cpplint](https://github.com/SublimeLinter/SublimeLinter-cpplint) for C++, which provides an interface to [cpplint](https://pypi.python.org/pypi/cpplint)
 
 2. Install [cpplint]:
@@ -91,7 +89,7 @@ less $(which cpplint)
 ### 6. Configuration
 
 #### User Settings
-In Preferences -> Setting-User, update the following syntax:
+In Preferences -> Setting, update the following syntax:
 
 ```shell
 {
@@ -107,14 +105,14 @@ In Preferences -> Setting-User, update the following syntax:
 	],
 	"line_padding_bottom": 1,
 	"line_padding_top": 1,
-	"theme": "Seti.sublime-theme"
+	"theme": "Seti_orig.sublime-theme"
 }
 ```
 Color scheme can be directly selected in Preferences -> Color Scheme
 
 
 #### Key Bindings
-In Preference -> Key Bindings-User, update the following:
+In Preferences -> Key Bindings, update the following:
 
 ##### For Ubuntu
 
