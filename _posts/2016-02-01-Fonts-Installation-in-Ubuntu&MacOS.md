@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Fonts in Ubuntu&MacOS
-subtitle: My Own Guide to customize fonts
-tags: [Environment]
+title: Fonts Installation in Ubuntu&MacOS
+subtitle: A Personal Guide
+tags: [Editor]
 bigimg: /img/path.jpg
 ---
 

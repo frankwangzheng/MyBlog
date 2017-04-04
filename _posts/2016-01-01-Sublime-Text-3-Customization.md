@@ -1,7 +1,7 @@
 ---
 layout: post
-title: All About Sublime Text 3
-subtitle: My Own Guide to Setup ST3
+title: Sublime Text 3 Customization
+subtitle: A Personal Guide 
 tags: [Editor]
 bigimg: /img/path.jpg
 ---

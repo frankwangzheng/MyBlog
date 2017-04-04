@@ -1,4 +1,12 @@
-This article is my step-by-step guide to install OpenCV 3.x and OpenCV 2.4.13.x in Ubuntu 16.04&14.04.
+---
+layout: post
+title: OpenCV Installation in Ubuntu LTS
+subtitle: A Personal Guide
+tags: [Library]
+bigimg: /img/path.jpg
+---
+
+This article is my step-by-step guide to install OpenCV 3.x and OpenCV 2.4.13.x in Ubuntu 16.04&14.04. It is advisable to download [OpenCV3.x](https://github.com/opencv/opencv/tree/3.2.0) and its corresponding [OpenCV_contrib](https://github.com/opencv/opencv_contrib/tree/3.2.0) directly from Github. There is no corresponding OpenCV_contrib for [OpenCV2.4](https://github.com/opencv/opencv/tree/2.4.13.2).
 
 ### Step 1: Clean Up System
 ```
@@ -113,7 +121,7 @@ sudo apt-get install ant
 sudo apt-get install default-jdk default-jre
 sudo apt install openjdk-8-jdk openjdk-8-jre
 ```
-#### MATLAB
+#### Matlab
 MATLAB needs to be installed using its ISO file. Run:
 ```
 sudo mkdir /media/matlab
@@ -217,7 +225,7 @@ Usually the include and library paths are: **/usr/local/include/opencv** and **/
 To test a C example, connect the PC with a webcam and execute:
 ```
 cd opencv-x.x.x/build/bin/
- ./c-example-facedetect
+./c-example-facedetect
 ```
 
 ## Manual Uninstallation

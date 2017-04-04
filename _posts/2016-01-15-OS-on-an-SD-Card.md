@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Flash an SD Card OS
-subtitle: My Own Guide to Burn an Image
+title: OS on an SD Card
+subtitle: A Personal Guide
 tags: [Embedded]
 bigimg: /img/path.jpg
 ---
