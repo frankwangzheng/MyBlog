@@ -148,7 +148,7 @@ sudo apt-get install matlab-support
 ```
 sudo apt-get install doxygen
 sudo apt-get install sphinx-common 
-sudo apt-get install --no-install-recommends texlive-latex-base texlive-latex-extra
+(sudo apt-get install --no-install-recommends texlive-latex-base texlive-latex-extra)
 ```
 
 #### Others

@@ -15,6 +15,7 @@ bigimg: /img/path.jpg
 #### General IDE Intelligence
 * [SublimeCodeIntel](https://packagecontrol.io/packages/SublimeCodeIntel) - For code auto-complete
 * [BracketHighlighter](https://packagecontrol.io/packages/BracketHighlighter) - For bracket highlight
+* [SideBarEnhancements](https://packagecontrol.io/packages/SideBarEnhancements) - For sidebar enhancement
 * [SublimeLinter](https://packagecontrol.io/packages/SublimeLinter) - For [code linting](http://stackoverflow.com/questions/8503559/what-is-linting)
 
 #### Markdown Preview
@@ -22,7 +23,10 @@ bigimg: /img/path.jpg
 
 #### Latex Preview
 * [LaTeXTools](https://packagecontrol.io/packages/LaTeXTools)
-* [LaTeXing](https://packagecontrol.io/packages/LaTeXing)
+* [LaTeXing](https://packagecontrol.io/packages/LaTeXing)(less popular)
+
+#### Web Development
+* [Emmet](https://packagecontrol.io/packages/Emmet)
 
 ### 3. Theme&Color-Scheme Packages 
 * [Theme - Soda](https://packagecontrol.io/packages/Theme%20-%20Soda)
@@ -97,7 +101,7 @@ In Preferences -> Setting, update the following syntax:
 	"caret_style": "phase",
 	"fade_fold_buttons": false,
 	"font_face": "Latin Modern Mono",
-	"font_size": 18.0,
+	"font_size": 15.0,
 	"highlight_line": true,
 	"ignored_packages":
 	[
@@ -105,6 +109,7 @@ In Preferences -> Setting, update the following syntax:
 	],
 	"line_padding_bottom": 1,
 	"line_padding_top": 1,
+	"color_scheme": "Packages/Tomorrow Color Schemes/Tomorrow-Night-Eighties.tmTheme",
 	"theme": "Seti_orig.sublime-theme"
 }
 ```
@@ -112,6 +117,7 @@ Color scheme can be directly selected in Preferences -> Color Scheme
 
 
 #### Key Bindings
+
 In Preferences -> Key Bindings, update the following:
 
 ##### For Ubuntu
