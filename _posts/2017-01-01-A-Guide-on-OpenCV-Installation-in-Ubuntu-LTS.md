@@ -170,11 +170,16 @@ mkdir build
 cd build
 ```
 
-Then invoke cmake-gui by typing "cmake-gui" in terminal to generate makefile, then do:
+Then invoke cmake-gui by typing "cmake-gui" in terminal. It is a convenient way to generate makefile, then do:
+
 ```
 make -j $(nproc)
 sudo make install
 ```
+
+Note that if using NVIDIA GPU card, the `CUDA_ARCH_PTX` should match the card's CUDA Capability.
+
+### Step 5: Error Debug
 
 #### Error 1: Cmake cannot find python libraries(Ubuntu 14.04)
 Cmake 2.8.* will invoke this error. Upgrade the cmake using this [ppa](http://askubuntu.com/questions/610291/how-to-install-cmake-3-2-on-ubuntu-14-04). 
@@ -199,7 +204,7 @@ Solve it by doing [this](https://github.com/pld-linux/opencv/commit/dadee4672641
 #### Error 4: "NppiGraphcutState" has not been delared in "graphcuts.cpp"(CUDA 8.0)
 Solve it by doing [this](https://github.com/opencv/opencv/pull/6510/files)
 
-### Step 5: Configure Environment
+### Step 6: Configure Environment
 Execute the following:
 ```
 sudo /bin/bash -c 'echo "/usr/local/lib" > /etc/ld.so.conf.d/opencv.conf'
@@ -210,7 +215,7 @@ then add the following lines in ~/.bashrc:
 export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig"
 ```
 
-### Step 6: Check Install
+### Step 7: Check Install
 To check the include path, execute:
 ```
 pkg-config --cflags opencv
@@ -221,7 +226,7 @@ pkg-config --libs opencv
 ```
 Usually the include and library paths are: **/usr/local/include/opencv** and **/usr/local/lib**
 
-### Step 7: Test an Example
+### Step 8: Test an Example
 To test a C example, connect the PC with a webcam and execute:
 ```
 cd opencv-x.x.x/build/bin/
