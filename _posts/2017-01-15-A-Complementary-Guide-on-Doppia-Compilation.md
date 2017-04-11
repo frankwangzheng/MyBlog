@@ -9,7 +9,7 @@ bigimg: /img/path.jpg
 It is a complementary guide to compile&run Rodrigo Benenson's [doppia](https://bitbucket.org/rodrigob/doppia) repository in Ubuntu16.04 with CUDA8.0&OpenCV2.4.13. Most of the setup steps can be found in the official guide.
 
 #### Library Setup
-To install OpenCV2.4.13, please refer to my [guide](http://frankwangzheng.me/2017-01-01-A-Guide-on-OpenCV-Installation-in-Ubuntu-LTS/). Other libraries, including boost1.58, SDL1.2 and google-probuf2.6.1 can be installed through `apt-get`:
+To install OpenCV2.4.13, please refer to my [guide](http://frankwangzheng.me/2017-01-01-A-Guide-on-OpenCV-Installation-in-Ubuntu-LTS/). Other libraries, including boost1.58, sdl1.2 and google-protobuf2.6.1 can be installed through `apt-get`:
 
 ```shell
 sudo apt-get install libboost-all-dev
@@ -21,7 +21,7 @@ Note: Do not install `libsdl2-dev`, otherwise "doppia" cannot find SDL files
 
 Other important libraries include cmake3.5.1 and g++5.4.0
 
-#### common_setting.cmake Edit
+#### `common_setting.cmake` Edit
 
 It is the section in the `common_setting.cmake` that matters: 
 
@@ -47,7 +47,8 @@ elseif(${HOSTNAME} STREQUAL  "ZHWANG-LINUX")
 **Solution**: This error is due to boost 1.58. Change line in common_settings.cmake from `set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall ")` to `set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -DBOOST_VARIANT_USE_RELAXED_GET_BY_DEFAULT=1")`
 
 
-**Error 2**: `doppia/src/objects_detection/cascade_stages/SoftCascadeOverIntegralChannelsFastFractionalStage.cpp:24:9: error: ‘swap’ is not a member of ‘std’`
+**Error 2**: `doppia/src/objects_detection/cascade_stages/SoftCascadeOverIntegralChannelsFastFractionalStage.cpp:24:9: 
+error: ‘swap’ is not a member of ‘std’`
 
 **Solution**: add `#include <iostream>` in `doppia/src/objects_detection/cascade_stages/SoftCascadeOverIntegralChannelsFastFractionalStage.hpp`
 
