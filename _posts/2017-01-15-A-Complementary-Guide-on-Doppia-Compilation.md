@@ -9,7 +9,7 @@ bigimg: /img/path.jpg
 It is a complementary guide to compile&run Rodrigo Benenson's [doppia](https://bitbucket.org/rodrigob/doppia) repository in Ubuntu16.04 with CUDA8.0&OpenCV2.4.13. Most of the setup steps can be found in the official guide.
 
 #### Library Setup
-To install OpenCV2.4.13, please refer to my [guide](2017-01-01-A-Guide-on-OpenCV-Installation-in-Ubuntu-LTS.md). Other libraries, including boost1.58, SDL1.2 and google-probuf2.6.1 can be installed through `apt-get`:
+To install OpenCV2.4.13, please refer to my [guide](http://frankwangzheng.me/2017-01-01-A-Guide-on-OpenCV-Installation-in-Ubuntu-LTS/). Other libraries, including boost1.58, SDL1.2 and google-probuf2.6.1 can be installed through `apt-get`:
 
 ```shell
 sudo apt-get install libboost-all-dev
