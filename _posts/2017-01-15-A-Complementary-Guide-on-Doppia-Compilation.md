@@ -21,7 +21,7 @@ Note: Do not install `libsdl2-dev`, otherwise "doppia" cannot find SDL files
 
 Other important libraries include cmake3.5.1 and g++5.4.0
 
-### `common_setting.cmake` Edit
+### Complete `common_setting.cmake` 
 
 It is the section in the `common_setting.cmake` that matters: 
 
@@ -47,9 +47,9 @@ elseif(${HOSTNAME} STREQUAL  "ZHWANG-LINUX")
 **Solution**: This error is due to boost 1.58. Change line in common_settings.cmake from `set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall ")` to `set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -DBOOST_VARIANT_USE_RELAXED_GET_BY_DEFAULT=1")`
 
 
-#### Error 2: src/objects_detection/cascade_stages/SoftCascadeOverIntegralChannelsFastFractionalStage.cpp: 24:9: error: ‘swap’ is not a member of ‘std’
+#### Error 2: .../SoftCascadeOverIntegralChannelsFastFractionalStage.cpp: 24:9: error: ‘swap’ is not a member of ‘std’
 
-**Solution**: add `#include <iostream>` in `src/objects_detection/cascade_stages/SoftCascadeOverIntegralChannelsFastFractionalStage.hpp`
+**Solution**: add `#include <iostream>` in `.../SoftCascadeOverIntegralChannelsFastFractionalStage.hpp`
 
 #### Error 3(runtime core dumped): A std::exception was raised: This executable was compiled without support for GpuVeryFastIntegralChannelsDetector 
 
