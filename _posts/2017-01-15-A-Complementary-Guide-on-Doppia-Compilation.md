@@ -43,16 +43,16 @@ elseif(${HOSTNAME} STREQUAL  "ZHWANG-LINUX")
 
 ### Error Debug
 
-### Error 1: /usr/local/include/boost/variant/get.hpp:178:5: error: invalid application of ‘sizeof’ to incomplete type ‘boost::STATIC_ASSERTION_FAILURE<false>’ ([Issue #84](https://bitbucket.org/rodrigob/doppia/issues/84/the-problem-while-compiling))
+#### Error 1: /usr/local/include/boost/variant/get.hpp:178:5: error: invalid application of ‘sizeof’ to incomplete type ‘boost::STATIC_ASSERTION_FAILURE<false>’ ([Issue #84](https://bitbucket.org/rodrigob/doppia/issues/84/the-problem-while-compiling))
 
 **Solution**: This error is due to boost 1.58. Change line in common_settings.cmake from `set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall ")` to `set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -DBOOST_VARIANT_USE_RELAXED_GET_BY_DEFAULT=1")`
 
 
-### Error 2: .../SoftCascadeOverIntegralChannelsFastFractionalStage.cpp: 24:9: error: ‘swap’ is not a member of ‘std’
+#### Error 2: .../SoftCascadeOverIntegralChannelsFastFractionalStage.cpp: 24:9: error: ‘swap’ is not a member of ‘std’
 
 **Solution**: add `#include <iostream>` in `.../SoftCascadeOverIntegralChannelsFastFractionalStage.hpp`
 
-### Error 3(runtime core dumped): A std::exception was raised: This executable was compiled without support for GpuVeryFastIntegralChannelsDetector 
+#### Error 3(runtime core dumped): A std::exception was raised: This executable was compiled without support for GpuVeryFastIntegralChannelsDetector 
 
 **Solution**: make sure line `option(USE_GPU "Should the GPU be used ?" True)` is in the user-specific section in `common_setting.cmake`
 
