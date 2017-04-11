@@ -1,3 +1,4 @@
+---
 layout: post
 title: Doppia Compilation in Ubuntu LTS with CUDA8.0 
 subtitle: A Personal Guide
