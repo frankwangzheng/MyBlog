@@ -179,7 +179,9 @@ sudo make install
 
 Note that if using NVIDIA GPU card, the `CUDA_ARCH_PTX` should match the card's CUDA Capability.
 
+
 ### Step 5: Error Debug
+
 
 #### Error 1: Cmake cannot find python libraries(Ubuntu 14.04)
 Cmake 2.8.* will invoke this error. Upgrade the cmake using this [ppa](http://askubuntu.com/questions/610291/how-to-install-cmake-3-2-on-ubuntu-14-04). 
