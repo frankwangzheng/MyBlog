@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Fonts Installation in Ubuntu&MacOS
-subtitle: A Personal Guide
+subtitle: A Simple Guide
 tags: [Editor]
 bigimg: /img/path.jpg
 ---
