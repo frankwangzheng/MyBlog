@@ -2,7 +2,7 @@
 layout: post
 title: OS on an SD Card
 subtitle: A Personal Guide
-tags: [Embedded]
+tags: [Hardware]
 bigimg: /img/path.jpg
 ---
 

@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Switch Default GPU for Display on Startup in Ubuntu LTS
+title: Change Default GPU for Display on Ubuntu Startup
 subtitle: A Simple Guide
-tags: [Editor]
+tags: [Hardware]
 bigimg: /img/path.jpg
 ---
 
@@ -15,7 +15,7 @@ First we shall find the Bus ID information for each GPU. We can find it in NVIDI
 sudo nvidia-settings
 ``` 
 
-Assuming the bus ID for display-dedicated GPU is "PCI:4:0:0", 
+Assuming the bus ID for display-dedicated GPU is "PCI:4:0:0"
 
 ### Create and Edit `xorg.conf` file
 
