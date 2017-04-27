@@ -83,7 +83,8 @@ sudo apt-get install libgstreamer0.10-dev libgstreamer-plugins-base0.10-dev
 ``` 
 sudo apt-get install libtbb-dev
 sudo apt-get install libeigen3-dev
-sudo apt-get install libatlas-base-dev libblas-dev liblapack-dev
+sudo apt-get install libatlas-base-dev libblas-dev 
+sudo apt-get install liblapack3 liblapacke-dev 
 ```
 
 #### Camera I/O
@@ -99,10 +100,18 @@ sudo apt-get install gfortran
 ```
 
 #### Python
+
+It is advisable to install pip first:
 ```
-sudo apt-get install --reinstall python-dev python-numpy
-sudo apt-get install python3-dev python3-numpy
+wget https://bootstrap.pypa.io/get-pip.py
+sudo python get-pip.py
 ```
+Then install numpy using pip:
+```
+sudo -H pip install numpy
+```
+
+For details on Python installaion, please check [this post](http://frankwangzheng.me/2016-03-01-Clean-Python-Setup/)
 
 #### OpenCL
 ```
@@ -147,7 +156,7 @@ sudo apt-get install matlab-support
 #### Documentations
 ```
 sudo apt-get install doxygen
-sudo apt-get install sphinx-common 
+(sudo apt-get install sphinx-common) 
 (sudo apt-get install --no-install-recommends texlive-latex-base texlive-latex-extra)
 ```
 
@@ -242,5 +251,6 @@ sudo make uninstall
 ```
 
 ## Awesome OpenCV Installation Reference
-[PyImageSearch's Installation Guide](http://www.pyimagesearch.com/2016/10/24/ubuntu-16-04-how-to-install-opencv/)
-[Caffe's Github Wiki Guide](https://github.com/BVLC/caffe/wiki/OpenCV-3.1-Installation-Guide-on-Ubuntu-16.04)  
+
+* [PyImageSearch's Installation Guide](http://www.pyimagesearch.com/2016/10/24/ubuntu-16-04-how-to-install-opencv/)
+* [Caffe's Github Wiki Guide](https://github.com/BVLC/caffe/wiki/OpenCV-3.1-Installation-Guide-on-Ubuntu-16.04)  
