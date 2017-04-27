@@ -149,6 +149,21 @@ cd ~/.virtualenvs/myenv/lib/python3.5/site-packages/
 ln -s /usr/local/lib/python3.5/site-packages/cv2.cpython-35m-x86_64-linux-gnu.so cv2.so
 ```
 
+#### Jupyter Notebook
+
+First install Jupyter Notebook by executing `pip install jupyter`. Then add Python 2 and Python 3 kernels for the execution of Jupyter Notebooks by executing:
+
+```shell
+python2 -m pip install ipykernel
+python2 -m ipykernel install --user --name myenv --display-name "Python2 (myenv)"
+
+python3 -m pip install ipykernel
+python3 -m ipykernel install --user --name myenv --display-name "Python3 (myenv)"
+```
+
+Lastly run jupyter notebook by executing `jupter notebook filename`.
+
+
 ### Reference 
 * [Ubuntu 16.04: How to install OpenCV](http://www.pyimagesearch.com/2016/10/24/ubuntu-16-04-how-to-install-opencv/)
 * [Properly Installing Python](http://docs.python-guide.org/en/latest/starting/installation/)
