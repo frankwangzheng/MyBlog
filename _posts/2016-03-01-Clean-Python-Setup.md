@@ -83,9 +83,9 @@ Then do `source ~/.bashrc` to reload the changes.
 To make a virtual environment, do:
 
 ```shell
-#For Python2.7
+#For Python2.x
 mkvirtualenv myenv -p python2
-#For Python3.5
+#For Python3.x
 mkvirtualenv myenv -p python3
 ```
 
@@ -120,8 +120,8 @@ deactivate
 
 ### Virtual environment setup with other libraries
 
-#### Caffe
 
+#### Caffe
 To use Python with Caffe for machine learning, PYTHONPATH needs to be set. To change the PYTHONPATH used in a virtualenv, add the following lines to your virtualenv's "myenv/bin/activate" file:
 
 ```shell
@@ -143,15 +143,15 @@ To use Python with OpenCV for image processing, first sym-link the OpenCV python
 ```shell
 #For python2.7
 cd ~/.virtualenvs/myenv/lib/python2.7/site-packages/
-ln -s /usr/local/lib/python2.7/site-packages/cv2.so cv2.so
+ln -s /usr/local/lib/python2.7/dist-packages/cv2.so cv2.so
 #For Python3.5
 cd ~/.virtualenvs/myenv/lib/python3.5/site-packages/
-ln -s /usr/local/lib/python3.5/site-packages/cv2.cpython-35m-x86_64-linux-gnu.so cv2.so
+ln -s /usr/local/lib/python3.5/dist-packages/cv2.cpython-35m-x86_64-linux-gnu.so cv2.so
 ```
 
 #### Jupyter Notebook
 
-First install Jupyter Notebook by executing `pip install jupyter`. Then add Python 2 and Python 3 kernels for the execution of Jupyter Notebooks by executing:
+First install [Jupyter Notebook](http://jupyter.org/index.html) by executing `pip install jupyter`. Then add [Python 2 and Python 3 kernels](https://ipython.readthedocs.io/en/latest/install/kernel_install.html) for the execution of Jupyter Notebooks by executing:
 
 ```shell
 python2 -m pip install ipykernel
@@ -165,5 +165,5 @@ Lastly run jupyter notebook by executing `jupter notebook filename`.
 
 
 ### Reference 
-* [Ubuntu 16.04: How to install OpenCV](http://www.pyimagesearch.com/2016/10/24/ubuntu-16-04-how-to-install-opencv/)
+* [PyImageSearch's Installation Guide](http://www.pyimagesearch.com/2016/10/24/ubuntu-16-04-how-to-install-opencv/)
 * [Properly Installing Python](http://docs.python-guide.org/en/latest/starting/installation/)

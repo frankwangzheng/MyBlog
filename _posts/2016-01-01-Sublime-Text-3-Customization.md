@@ -7,10 +7,10 @@ bigimg: /img/path.jpg
 ---
 
 
-### 1. Package Control
-[Package Control](https://packagecontrol.io/) is the prerequisite for other installations. Use ctrl+shift+p(Ubuntu)/command+shift+p(MacOS) to access from [Sublime Text 3](http://www.sublimetext.com/3)
+### 1. Install Package Control
+[Package Control](https://packagecontrol.io/) is the prerequisite to install all packages. After installing Package Control, use ctrl+shift+p(Ubuntu)/command+shift+p(MacOS) to gain access.
 
-### 2. Functional Packages
+### 2. Install Packages
 
 #### General IDE Intelligence
 * [SublimeCodeIntel](https://packagecontrol.io/packages/SublimeCodeIntel) - For code auto-complete
@@ -18,52 +18,49 @@ bigimg: /img/path.jpg
 * [SideBarEnhancements](https://packagecontrol.io/packages/SideBarEnhancements) - For sidebar enhancement
 * [SublimeLinter](https://packagecontrol.io/packages/SublimeLinter) - For [code linting](http://stackoverflow.com/questions/8503559/what-is-linting)
 
-#### Markdown Preview
+#### Language Intelligence
+* [Python3](https://packagecontrol.io/packages/Python%203)
 * [Markdown Preview](https://packagecontrol.io/packages/Markdown%20Preview)
-
-#### Latex Preview
 * [LaTeXTools](https://packagecontrol.io/packages/LaTeXTools)
-* [LaTeXing](https://packagecontrol.io/packages/LaTeXing)(less popular)
-
-#### Web Development
+<!--* [LaTeXing](https://packagecontrol.io/packages/LaTeXing)(less popular)-->
 * [Emmet](https://packagecontrol.io/packages/Emmet)
 
-### 3. Theme&Color-Scheme Packages 
-* [Theme - Soda](https://packagecontrol.io/packages/Theme%20-%20Soda)
-* [Material Theme](https://packagecontrol.io/packages/Material%20Theme)
+### 3. Intall Theme&Color-Scheme 
 * [Seti_UI](https://packagecontrol.io/packages/Seti_UI)
-* [Tomorrow Color Schemes](https://packagecontrol.io/packages/Tomorrow%20Color%20Schemes)
-
-### 5. Code Linting Setup
+* [Seti_UX](https://packagecontrol.io/packages/Seti_UX)
+<!--* [Theme - Soda](https://packagecontrol.io/packages/Theme%20-%20Soda)-->
+<!--* [Material Theme](https://packagecontrol.io/packages/Material%20Theme)-->
+<!--* [Tomorrow Color Schemes](https://packagecontrol.io/packages/Tomorrow%20Color%20Schemes)-->
+### 4. Setup Code Linting
 
 #### For Python:
 
-1. Install [Sublime​Linter-pylint](https://packagecontrol.io/packages/SublimeLinter-pylint) for Python, which provides an interface to [pylint](https://www.pylint.org/). 
-2. Install [pylint](https://www.pylint.org/):
+Install [Sublime​Linter-pylint](https://packagecontrol.io/packages/SublimeLinter-pylint) for Python, which provides an interface to [pylint](https://www.pylint.org/). 
+
+Install [pylint](https://www.pylint.org/)
 
 ```shell
 sudo apt-get install pylint
 ```
-
-3. Check pylint version, the apt-get method installs pylint for Python 2 by default:
-
-```shell
-less $(which pylint)
-```
-
-4. Install pylint specifically for Python 3:
+It installs pylint for Python 2 by default. For Python 3:
 
 ```shell
 sudo pip3 install pylint
 ```
 
-5. Create a pylint configuration
+To check pylint version,
+
+```shell
+less $(which pylint)
+```
+
+To create a pylint configuration
 
 ```shell
 pylint --generate-rcfile > ~/.pylintrc
 ```
 
-6. To avoid pylint to throw some warnings, edit .pylintrc such as:
+To avoid pylint to throw some warnings, edit .pylintrc such as:
 
 ```shell
 [MESSAGES CONTROL]
@@ -76,21 +73,21 @@ disable = F0401, W0141, R0914
 All pylint messages are listed [here](http://pylint-messages.wikidot.com/)
 
 #### For C++:
-1. Install [SublimeLinter-cpplint](https://github.com/SublimeLinter/SublimeLinter-cpplint) for C++, which provides an interface to [cpplint](https://pypi.python.org/pypi/cpplint)
+Install [SublimeLinter-cpplint](https://github.com/SublimeLinter/SublimeLinter-cpplint) for C++, which provides an interface to [cpplint](https://pypi.python.org/pypi/cpplint)
 
-2. Install [cpplint]:
+Install [cpplint](https://pypi.python.org/pypi/cpplint):
 
 ```shell
 sudo pip install cpplint
 ```
 
-3. Check cpplint version
+To check cpplint version
 
 ```shell
 less $(which cpplint)
 ```
 
-### 6. Configuration
+### 5. Configuration
 
 #### User Settings
 In Preferences -> Setting, update the following syntax:
@@ -99,9 +96,10 @@ In Preferences -> Setting, update the following syntax:
 {
 	"bold_folder_labels": true,
 	"caret_style": "phase",
+	"color_scheme": "Packages/Python 3/Gloom.tmTheme",
 	"fade_fold_buttons": false,
 	"font_face": "Latin Modern Mono",
-	"font_size": 15.0,
+	"font_size": 18.0,
 	"highlight_line": true,
 	"ignored_packages":
 	[
@@ -109,12 +107,11 @@ In Preferences -> Setting, update the following syntax:
 	],
 	"line_padding_bottom": 1,
 	"line_padding_top": 1,
-	"color_scheme": "Packages/Tomorrow Color Schemes/Tomorrow-Night-Eighties.tmTheme",
 	"theme": "Seti_orig.sublime-theme"
 }
 ```
 Color scheme can be directly selected in Preferences -> Color Scheme
-
+Theme can be directly selected in Preferences -> Theme
 
 #### Key Bindings
 

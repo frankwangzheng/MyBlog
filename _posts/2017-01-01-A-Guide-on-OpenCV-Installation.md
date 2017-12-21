@@ -244,13 +244,12 @@ cd opencv-x.x.x/build/bin/
 ./c-example-facedetect
 ```
 
-## Manual Uninstallation
+### Manual Uninstallation
 Go to "build" folder where makefile resides, do:
 ```
 sudo make uninstall
 ```
 
-## Awesome OpenCV Installation Reference
-
+### Awesome OpenCV Installation Reference
 * [PyImageSearch's Installation Guide](http://www.pyimagesearch.com/2016/10/24/ubuntu-16-04-how-to-install-opencv/)
 * [Caffe's Github Wiki Guide](https://github.com/BVLC/caffe/wiki/OpenCV-3.1-Installation-Guide-on-Ubuntu-16.04)  
