@@ -30,7 +30,7 @@ python3 --version
 ls -l $(command -v python)
 ```
 
-Note that "python" may sym-link to "python2" or "python3". To re-link, use `ln -sf` command.
+Note that "python" may sym-link to "python2" or "python3". To ensure "python3" as the default "python", re-link "/usr/bin/python" using `ln -sf /usr/bin/python /usr/bin/python3` command.
 
 ### Install pip
 
@@ -60,7 +60,7 @@ pip3 --version
 ls -l $(command -v pip)
 ```
 
-Note that "pip" may be sym-linked to "pip2" or "pip3". To re-link, use `ln -sf` command.
+Note that "pip" may be sym-linked to "pip2" or "pip3". To ensure "pip3" is the default "pip" , re-link "pip" using `ln -sf /usr/local/bin/pip /usr/local/bin/pip3` command.
 
 ### Install virtualenv and virtualenvwrapper
 
@@ -69,7 +69,7 @@ We can use pip to install virtualenv and virtualenvwrapper easily, do:
 ```shell
 sudo pip install virtualenv virtualenvwrapper
 ```
-
+Support pip is linked to "pip3"
 Then we need to update "~/.bashrc" file by adding the following lines:
 
 ```shell
@@ -118,7 +118,7 @@ To quit "myenv":
 deactivate
 ```
 
-### Virtual environment setup with other libraries
+### Link external libraries with virtualenv
 
 
 #### Caffe
@@ -136,7 +136,9 @@ To have it restored to its original value on deactivate, add the following line 
 export PYTHONPATH="$OLD_PYTHONPATH"
 ```
 
+
 #### OpenCV
+
 
 To use Python with OpenCV for image processing, first sym-link the OpenCV python library, which usually locates in "/usr/local/lib/pythonX.X/site-packages", into the virtual environment:
 
@@ -149,7 +151,9 @@ cd ~/.virtualenvs/myenv/lib/python3.5/site-packages/
 ln -s /usr/local/lib/python3.5/dist-packages/cv2.cpython-35m-x86_64-linux-gnu.so cv2.so
 ```
 
+
 #### Jupyter Notebook
+
 
 First install [Jupyter Notebook](http://jupyter.org/index.html) by executing `pip install jupyter`. Then add [Python 2 and Python 3 kernels](https://ipython.readthedocs.io/en/latest/install/kernel_install.html) for the execution of Jupyter Notebooks by executing:
 
