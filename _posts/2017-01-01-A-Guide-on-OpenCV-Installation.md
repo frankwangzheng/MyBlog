@@ -34,6 +34,8 @@ sudo apt-get install libgtk-3-dev
 sudo apt-get install qt5-default qtbase5-dev libqt5opengl5
 sudo apt-get install libvtk6-dev libvtk6-qt-dev
 ```
+Note: if dpkg falls in a unsolvable dependency loop, make sure there is a symlink from `/usr/bin/python` to `/usr/bin/python2`(but not `usr/bin/python3`), by doing `sudo ln -sf /usr/bin/python2 /usr/bin/python`
+
 For OpenCV 2.4.13.x:
 ```
 sudo apt-get install libgtk2.0-dev
@@ -79,6 +81,11 @@ Older Version(Optional):
 sudo apt-get install libgstreamer0.10-dev libgstreamer-plugins-base0.10-dev
 ```
 
+#### Fortran
+```
+sudo apt-get install gfortran
+```
+
 #### Parallelism and Linear Algebra
 ``` 
 sudo apt-get install libtbb-dev
@@ -94,29 +101,29 @@ sudo apt-get install libunicap2-dev
 sudo apt-get install libgphoto2-dev
 ```
 
-#### Fortran
-```
-sudo apt-get install gfortran
-```
+#### Python Numpy
 
-#### Python
-
-It is advisable to install pip first:
 ```
 wget https://bootstrap.pypa.io/get-pip.py
 sudo python get-pip.py
+sudo python3 get-pip.py
+sudo -H pip2 install numpy
+sudo -H pip3 install numpy
 ```
-Then install numpy using pip:
-```
-sudo -H pip install numpy
-```
+A detailed guide on [Python setup](http://frankwangzheng.me/2016-03-01-Clean-Python-Setup/)
 
-For details on Python installaion, please check [this post](http://frankwangzheng.me/2016-03-01-Clean-Python-Setup/)
+
+#### Caffe Dependencies 
+```
+sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libhdf5-serial-dev protobuf-compiler
+sudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev
+```
+Note: without `libopencv-dev` and `libboost-all-dev`
+
 
 #### OpenCL
 ```
-sudo apt-get install libclblas2 libclfft2 libclfft-dev libclblas-dev
-sudo apt-get install ocl-icd-libopencl-dev
+sudo apt-get install libclblas2 libclfft2 libclfft-dev libclblas-dev ocl-icd-opencl-dev
 ```
 
 #### OpenGL
@@ -128,10 +135,10 @@ sudo apt-get install libgl1-mesa-dev mesa-common-dev
 ```
 sudo apt-get install ant 
 sudo apt-get install default-jdk default-jre
-sudo apt install openjdk-8-jdk openjdk-8-jre
+sudo apt-get install openjdk-8-jdk openjdk-8-jre
 ```
-#### Matlab
-MATLAB needs to be installed using its ISO file. Run:
+#### MATLAB
+To install MATLAB from its ISO file. Run:
 ```
 sudo mkdir /media/matlab
 sudo mount -o loop matlab.xxx.iso /media/matlab
@@ -142,7 +149,7 @@ sudo rm -rf /media/matlab
 ```
 After installation, create a soft-link for the executable:
 ```
-sudo ln -s -f /usr/local/MATLAB/.../bin/matlab /usr/lib/matlab
+sudo ln -s -f /usr/local/MATLAB/.../bin/matlab /usr/bin/matlab
 ```
 Run MATLAB using:
 ```
