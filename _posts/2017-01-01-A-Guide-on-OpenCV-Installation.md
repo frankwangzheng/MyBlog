@@ -90,7 +90,8 @@ sudo apt-get install gfortran
 ``` 
 sudo apt-get install libtbb-dev
 sudo apt-get install libeigen3-dev
-sudo apt-get install libatlas-base-dev libblas-dev 
+sudo apt-get install libatlas-base-dev libblas-dev
+(sudo apt-get install libopenblas-base libopenblas-dev) 
 sudo apt-get install liblapack3 liblapacke-dev 
 ```
 
